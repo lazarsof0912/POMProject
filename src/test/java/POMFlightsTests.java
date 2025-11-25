@@ -86,18 +86,12 @@ public class POMFlightsTests {
         SearchPage searchPage = new SearchPage();
         searchPage.search("24.11.2025", "Казань", "Париж");
 
-        sleep(3000);
-
         FlightsList flightsList = new FlightsList();
         flightsList.isNoFlights();
         flightsList.newSearch();
 
-        sleep(3000);
-
         searchPage.search("24.11.2025", "Москва", "Нью-Йорк");
         flightsList.registerToFirstFlight();
-
-        sleep(3000);
 
         RegistrationPage registrationPage = new RegistrationPage();
         registrationPage.passportNumber("jfghb");
